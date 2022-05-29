@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bases';
+
+  public contador: number = 0
+  public base: number = 10
+
+  aumentar(valor: number) {
+    this.contador += valor
+
+  }
 }

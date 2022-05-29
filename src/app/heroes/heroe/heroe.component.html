@@ -1,0 +1,13 @@
+<p>heroe works!</p>
+
+<button class="btn btn-info" (click)="borrar()" *ngIf=" heroes.length > 0">Borrar último</button>
+
+<h2 *ngIf=" heroes.length">Heroe borrado : <strong>{{ heroeBorrado}}</strong></h2>
+
+<div>
+    <ul *ngFor="let heroe of heroes; let i = index">
+        <li>{{ i +1 }}-{{ heroe}}</li>
+    </ul>
+
+    <!-- <span>{{ heroes.length }}</span> -->
+</div>
