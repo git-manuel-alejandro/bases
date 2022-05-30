@@ -1,0 +1,48 @@
+<div class="">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>GIF</h3>
+            <hr>
+
+            <div *ngFor="let gif of gifshort">
+                <button class="btn btn-outline-dark btn-block" (click)="recarga(gif)">{{ gif }}</button>
+
+            </div>
+            <hr *ngIf="gifshort.length >=1">
+
+
+        </div>
+
+        <div class="col-md-8">
+            <h3>GIF Encontrados</h3>
+            <hr>
+            <div class="">
+                <div class="row">
+                    <div class="col-md-9">
+                        <input type="text" name="" id="" placeholder="Buscar" class="form-control" [(ngModel)]="termino"
+                            (keyup.enter)="buscar()">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="btn btn-success" (click)="buscar()">Buscar</div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="col-md-4 col-sm6" *ngFor="let personaje of personajes; let i = index">
+                    <div class="card">
+                        <img [src]="personaje.images.downsized_medium.url" class="card-img-top " alt="...">
+
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{personaje.title}}</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
